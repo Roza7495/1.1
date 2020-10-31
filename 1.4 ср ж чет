@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	double x[3];
+	double n = 26;
+	double fx, uk;
+	int i, j;
+	x[0] = -0.7;
+	x[1] = -1.6;
+	x[2] = 3.5;
+	for (i = 0;i < 3; i++)
+	{
+		if (x[i] < 0)
+			fx=sin(x[i] + 1);
+		if (x[i] >= 0)
+			fx = sin(x[i] + 1)*sin(x[i] + 1);
+		uk = 1;
+		for (j = 0;j < 20;j++)
+		{
+			uk = uk * 2 / 3 + (fx / (3 * uk*uk));
+		}
+		cout << uk << " ";
+	}
+	system("pause");
+	return 0;
+}
