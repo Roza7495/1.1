@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	double x, y, h = 0.05, b = -1, min = 5, max = 0;;
+	int  n = 9;
+	double a[] = { -0.04,2,1.96 };
+	for (int i = 0;i < 3;i++)
+	{
+		for (int j = 1;j <= n;j++)
+		{
+			x = b + j * h;
+			if (a[i] < 0)
+				y = log(1 + a[i] * a[i] + x * x) - 1;
+				if (y*y > max) {
+					max = y;
+				}
+            if (a[i]>=0)
+			y = log(1 + 2 * a[i] + x * x) + 1;
+			if (y*y < min) { min = y; }
+
+		}
+		cout << "Fi = " << min << " " << "Lyam = " << max << endl;
+	}
+	return 0;
+	system("pause");
+}
