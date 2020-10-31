@@ -20,7 +20,6 @@ int main()
             if (a[i]>=0)
 			y = log(1 + 2 * a[i] + x * x) + 1;
 			if (y*y < min) { min = y; }
-
 		}
 		cout << "Fi = " << min << " " << "Lyam = " << max << endl;
 	}
