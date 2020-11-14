@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b, c, d,i,j=0;
+	cout <<"enter a,b,c,d"<< "0<=b<=a, 0<=d<=c" << endl;
+	cin >> a >> b;
+	cin >> c >> d;
+	for (i = 10000;i < 100000;i++)
+	{
+		if (i%a==b && i%c==d)
+		j=1;
+	}
+	if (j=1) {
+	for (i = 10000;i < 100000;i++)
+	{
+		if (i%a==b && i%c==d)
+		cout <<i<< " ";
+	}
+	}
+	else
+	{
+		cout << -1;
+	}
+    
+}
