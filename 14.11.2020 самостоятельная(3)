@@ -1,0 +1,25 @@
+#include <iostream>
+#include <ctime>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main() {
+	int a[5];
+	int i;
+	double sum = 0;
+	srand(time(0));
+	for (i = 0;i < 5;i++)
+		a[i]=rand() % 51 + 25;
+	for (i = 0;i < 5;i++)
+		cout << a[i]<<" "<<endl;
+	for (i = 0;i < 5;i++)
+	{
+		if (a[i] % 2 == 1)
+			sum +=a[i];
+	}
+	if (sum != 0) {
+		cout << "sum = ";
+		cout << fixed << setprecision(2) << sum / 5.00 << endl;
+	}
+	else cout << "NO";
+}
